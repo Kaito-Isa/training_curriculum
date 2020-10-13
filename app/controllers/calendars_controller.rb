@@ -1,12 +1,11 @@
 class CalendarsController < ApplicationController
 
-  def index
+  def index 
     get_week
     @plan = Plan.new
   end
 
   def create
-    binding.pry
     Plan.create(plan_params)
     redirect_to action: :index
   end
@@ -41,4 +40,4 @@ class CalendarsController < ApplicationController
     end
 
   end
-end
+end 
